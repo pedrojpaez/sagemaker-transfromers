@@ -1,3 +1,7 @@
+import sys
+import subprocess
+subprocess.call([sys.executable, "-m", "pip", "install", "gluonnlp==0.9.1"])
+
 import gluonnlp as nlp
 
 train_dataset, test_dataset = [nlp.data.IMDB(root='data/imdb', segment=segment)
